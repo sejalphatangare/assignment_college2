@@ -12,6 +12,9 @@ public class BinaryTreeNode{
         this.right = null;
         this.data = data;
     }
+    public BinaryTreeNode(){
+
+    }
     public int getData() {
         return data;
     }
