@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BinarySearchTree/BinarySearchTree.iml" filepath="$PROJECT_DIR$/BinarySearchTree/BinarySearchTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinaryTree/BinaryTree.iml" filepath="$PROJECT_DIR$/BinaryTree/BinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stackfinal/Stackfinal.iml" filepath="$PROJECT_DIR$/Stackfinal/Stackfinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/assignment_college.iml" filepath="$PROJECT_DIR$/.idea/assignment_college.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bank/bank.iml" filepath="$PROJECT_DIR$/bank/bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib2/lib2.iml" filepath="$PROJECT_DIR$/lib2/lib2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matrix/matrix.iml" filepath="$PROJECT_DIR$/matrix/matrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matrix2/matrix2.iml" filepath="$PROJECT_DIR$/matrix2/matrix2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matrixoperation/matrixoperation.iml" filepath="$PROJECT_DIR$/matrixoperation/matrixoperation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pizza_parlour/pizza_parlour.iml" filepath="$PROJECT_DIR$/pizza_parlour/pizza_parlour.iml" />
+    </modules>
+  </component>
+</project>
