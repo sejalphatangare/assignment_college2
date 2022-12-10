@@ -162,9 +162,8 @@ public class pizza_parlour{
         System.out.println("Your Order Details");
         for (int i = 0; i <node.getL1().size(); i++) {
             Pizza p3 = node.getL1().get(i);
-            System.out.println((i + 1)+"\n\t" + "\n\t"+node.getCname() + "\n\t"+p3.getPizzaname() +"\n\t"+ p3.getSize()+"\n\t" + p3.getPrice()+"\n\t" + node.getCphno() + "\n\t" + node.getTotal());
-
-            System.out.println("-------------------------------------------------------------------------------------------------------");
+            System.out.println("Order No:"+(i + 1)+"\n\t" +"Customer name: "+node.getCname()+"\n\tPizza Name: " +p3.getPizzaname() +"\n\tPizza Size: "+ p3.getSize()+"\n\t" +"Pizza Price : "+ p3.getPrice()+"\n\t"+"Customer Phone Number: " + node.getCphno() +"\n\tTotal amount: " + node.getTotal());
+            System.out.println("---------------------------------------------your order will be delivered shortly----------------------------------------------------------");
         }
         if (rear == null) {
             this.front = this.rear =node;
@@ -172,7 +171,7 @@ public class pizza_parlour{
         } else {
             this.rear.next =node;
             this.rear =node;
-            System.out.println("Order Succesfully added:");
+            System.out.println("Order Succesfully Placed:");
         }
 
     }
@@ -183,7 +182,7 @@ public class pizza_parlour{
         }
             Node ptr=this.front;
             this.front=this.front.next;
-            System.out.println("\n\tSuccefully delivered following details:\n\t"+ptr.getL1()+"\n\t************Pay Bill*************"+"\n\t"+ptr.getTotal()+ptr.getCname()+ptr.getCphno());
+            System.out.println("\n\tSuccefully delivered following details:\n\t"+ptr.getL1()+"\n\t************Pay Bill*************"+"\n\tCustomer Name: "+ptr.getCname()+"\n\tCustomer Phone no: "+ptr.getCphno()+"\n\tTotal Price: "+ptr.getTotal());
             ptr=null;
             if (this.front==null){
                 this.rear=null;
@@ -192,7 +191,7 @@ public class pizza_parlour{
     public void display(){
         Node ptr=front;
         if (front==null){
-            System.out.println("........No Orders......");
+            System.out.println("........No Orders.......");
         }
         else {
             System.out.println("****************Orders****************");
@@ -200,8 +199,8 @@ public class pizza_parlour{
 
                 for (int i = 0; i <ptr.getL1().size(); i++) {
                     Pizza p3 = ptr.getL1().get(i);
-                    System.out.println((i + 1) + ptr.getCname() + p3.getPizzaname() + p3.getSize() + p3.getPrice() + ptr.getCphno() + "\n\t" + ptr.getTotal());
-                    System.out.println("-------------------------------------------------------------------------------------------------------");
+                    System.out.print((i + 1)+" " +"\n\tCustomer name: "+ ptr.getCname()+"\n\tPizza Name: " + p3.getPizzaname() +"\n\tPizza Size: "+ p3.getSize()+"\n\tPizza Price: " + p3.getPrice()+"\n\tPizza Customer Phone no." + ptr.getCphno()+" " + "\n\tTotal: " + ptr.getTotal());
+                    System.out.println("\n\t-------------------------------------------------------------------------------------------------------");
                 }
 
                 ptr=ptr.next;
@@ -236,7 +235,9 @@ public class pizza_parlour{
 
             }
             System.out.println("Do you want to Continue press 1:");
+
         }while(sc.nextInt()==1);
+        System.out.println("\n\tThank you Visit Again");
     }
 }
 

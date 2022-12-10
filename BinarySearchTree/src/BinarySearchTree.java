@@ -13,7 +13,7 @@ public class BinarySearchTree {
 
     public void create() throws IOException {
         do {
-            BinarySearchTreeNode ptr = null, prev, cur;
+            BinarySearchTreeNode ptr = null, cur;
             ptr = new BinarySearchTreeNode();
             System.out.println("\n\tEnter the Word in the Dictionary:");
             ptr.setWord(br.readLine());
@@ -173,9 +173,8 @@ public class BinarySearchTree {
                     if (parent == null) {
                         root = cur.right;
                         cur.right = null;
-                        cur = null;
                     } else {
-                        if (parent.getWord().compareToIgnoreCase(ele) > 0) {
+                        if (parent.getWord().compareToIgnoreCase(ele) < 0) {
 //                            node to be deleted(right subtree) is to be found on the right side of the root
                             parent.right = cur.right;
                             cur.right = null;

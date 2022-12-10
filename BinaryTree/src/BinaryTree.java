@@ -99,7 +99,6 @@ public class BinaryTree{
             System.out.println("Tree is Empty");
         } else {
             cur = root;
-//            System.out.println(b4.root.x);
             while (cur != null || s1.size() > 0) {
                 if (cur != null) {
                     s1.push(cur);
