@@ -33,7 +33,7 @@ public class lib2 {
             book_data[k++] = new book(Bookn, Authorn, Publication, isbn);
             System.out.println("Do you want to add more books press 0");
         } while (sc1.nextInt() == 0);
-
+        System.out.println("k is "+k);
     }
 
     void display_book_details() {
@@ -92,6 +92,7 @@ public class lib2 {
     public void sort_books() {
         int temp;
         // Sorting strings using bubble sort
+
         for (int i = 0; i < k - 1; i++) {
             for (int j = 1; j < (k - i); j++) {
                 if (book_data[j - 1].isbn > book_data[j].isbn) {
@@ -101,14 +102,14 @@ public class lib2 {
                 }
             }
         }
-        System.out.println("Sorted Array with respect to Author Name:");
+        System.out.println("Sorted Array with respect to Isbn no:");
         System.out.print("[");
         for (int i = 0; i < k; i++)
             System.out.print(" Isbn Number: " + book_data[i].isbn);
         System.out.print("]");
         System.out.println(" ");
         System.out.println("***********************************************************************************");
-        System.out.println("Sorted Array with respect to Author Name:");
+        System.out.println("Sorted Array with respect to isbn no:");
         System.out.print("[");
         for (int i = 0; i < k; i++)
             System.out.print("\nBook Name: " + book_data[i].Bookn + " \nIsbn Number: " + book_data[i].isbn + "\nAuthor Name: " + book_data[i].Authorn + " \nPublication: " + book_data[i].Publication + " \n");
@@ -119,7 +120,7 @@ public class lib2 {
     void search_authorn() throws IOException {
         String search;
         int flag = 0;
-
+//Linear Search
         System.out.println("Enter the Author Name you want to search:");
         search = br.readLine();
         for (int i = 0; i < k; i++) {

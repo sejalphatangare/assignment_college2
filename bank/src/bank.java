@@ -18,7 +18,6 @@ class bank{
     node head;
     bank(){
         head=null;
-
     }
 
     void create() throws IOException {
@@ -86,12 +85,12 @@ class bank{
         }
         else {
             /*Insertion is possible*/
-            ptr=new node();
-            ptr.acc_no=e;
-            ptr.name=f;
-            ptr.address=g;
-            ptr.balance=h;
-            ptr.next=null;
+//            ptr=new node();
+//            ptr.acc_no=e;
+//            ptr.name=f;
+//            ptr.address=g;
+//            ptr.balance=h;
+//            ptr.next=null;
 
             /*now insertion*/
             if (prev==null){

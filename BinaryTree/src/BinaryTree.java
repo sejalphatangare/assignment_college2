@@ -120,10 +120,9 @@ public class BinaryTree{
             System.out.println("Tree is empty");
         }
         else{
-            cur=root;
+//            cur=root;
             s1.push(root);
             while (!s1.isEmpty()){
-
                 cur=s1.pop();
                 System.out.print(cur.getData()+" ");
                 if (cur.right!=null){

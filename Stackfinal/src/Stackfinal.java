@@ -3,7 +3,7 @@ class reverse{
     Scanner sc1=new Scanner(System.in);
     String exp;
     char ch;
-    char reverse_array[]=new char[89];
+    char[] reverse_array =new char[89];
     int top;
     reverse(){
         top=-1;
@@ -57,7 +57,7 @@ class Stackfinal{
     Stackfinal(int n){
         top=-1;
         maxsize=n;
-        st = new Double[maxsize];
+        st = new Double[n];
     }
     Double push(Double v){
 
@@ -120,19 +120,19 @@ class Stackfinal{
         System.out.println("\n\tResult is "+pop());
 
     }
-    void reverse() {
-        for(int i=0;i<maxsize;i++) {
-            System.out.println("enter elements:");
-            Double c=sc.nextDouble();
-            push(c);
-        }   for(int i=0;i<maxsize;i++) {
-            System.out.println(pop());
-        }
+//    void reverse() {
+//        for(int i=0;i<maxsize;i++) {
+//            System.out.println("enter elements:");
+//            Double c=sc.nextDouble();
+//            push(c);
+//        }   for(int i=0;i<maxsize;i++) {
+//            System.out.println(pop());
+//        }
 
 
 
 
-    }
+//    }
     public static void main(String args[]){
         Scanner sc1=new Scanner(System.in);
         reverse r1=new reverse();

@@ -15,8 +15,9 @@ public class ListGraph {
     }
     public void addEdge(int source,int desti){
 //        a[source].add(0,desti);
-//        a[desti].add(0,source);
         a[source].add(desti);
+        a[desti].add(source);
+
 //        a[desti].add(source);
 
     }
@@ -30,14 +31,15 @@ public class ListGraph {
         int visited[]=new int[20];
         visited[start]=1;
         q.add(start);
+        System.out.println(start);
         while(q.size()!=0){
             int cur=q.poll();
-            System.out.print(cur+" ");
             for (int i=0;i<a[cur].size();i++){
                 int ele=a[cur].get(i);
                 if (visited[ele]!=1){
                     visited[ele]=1;
                     q.add(ele);
+                    System.out.println(ele);
                 }
             }
         }
@@ -60,23 +62,23 @@ public class ListGraph {
         Answer = 2 4 7 5 8   */
 
     }
-    public void dfs(int start){
-        int visited[]=new int[10];
-        Stack<Integer> s=new Stack<>();
-        visited[start]=1;
+    public void dfs(int start) {
+        int visited[] = new int[10];
+        Stack<Integer> s = new Stack<>();
+        visited[start] = 1;
         s.push(start);
-        System.out.print(start+" ");
-        while(!s.isEmpty()){
-            int cur=s.peek();
+        while (!s.isEmpty()) {
+            int cur = s.peek();
+            System.out.print(cur + " ");
+
             s.pop();
-            if (visited[cur]!=1){
-                System.out.print(cur+" ");
-                visited[cur]=1;
-            }
-            for (int i=0;i<a[cur].size();i++){
-                int ele=a[cur].get(i);
-                if (visited[ele]!=1){
-                    s.push(ele);
+            if (visited[cur] != 1) {
+                visited[cur] = 1;
+                for (int i = 0; i < a[cur].size(); i++) {
+                    int ele = a[cur].get(i);
+                    if (visited[ele] != 1) {
+                        s.push(ele);
+                    }
                 }
             }
         }

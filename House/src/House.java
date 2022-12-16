@@ -52,7 +52,6 @@ public class House {
             System.out.print(" "+cur);
             for (int i = 0; i < adjMat.length; i++) {
                 if (adjMat[cur][i] == 1 && visited[i] == 0) {
-                    int ele = adjMat[cur][i];
                     s.push(i);
                     visited[i] = 1;
                 }
@@ -68,6 +67,13 @@ public class House {
         while(!q.isEmpty()){
             int cur=q.poll();
             System.out.println(" "+cur);
+            for (int i=0;i<adjMat.length;i++){
+                if (visited[i]==0 && adjMat[cur][i]==1){
+                    q.add(i);
+                    visited[i]=1;
+
+                }
+            }
 
         }
     }

@@ -90,7 +90,7 @@ public class BinarySearchTree {
         return cur;
     }
 
-    public void update() throws IOException {
+    /*public void update() throws IOException {
         System.out.println("\n\t1]Update Word in the Dictionary:\n\t2]Update Meaning in the Dictionary:");
         int temp = sc.nextInt();
         if (temp == 1) {
@@ -111,7 +111,7 @@ public class BinarySearchTree {
 
             }
         }
-    }
+    }*/
 
     public void deletion(BinarySearchTreeNode cur, String ele) {
         Scanner sc = new Scanner(System.in);
@@ -204,7 +204,7 @@ public class BinarySearchTree {
                             parent1.right = null;
                         }
                     } else {
-                        if (temp.left != null) {
+                        if (temp.left != null) { // parent.left is temp
                             parent1.left = temp.left;
                         } else {
                             parent1.left = null;
@@ -239,10 +239,7 @@ public class BinarySearchTree {
                     b1.search();
                     break;
                 }
-                case 4: {
-                    b1.update();
-                    break;
-                }
+
                 case 5: {
                     System.out.println("\n\tEnter the Word to be Deleted:");
                     String del_word = br.readLine();

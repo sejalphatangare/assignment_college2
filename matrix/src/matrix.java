@@ -65,7 +65,7 @@ import java.util.*;
 
         for (int i=1;i<p;i++){
             for(int j=0;j<i;j++){
-                if((j<i) &&  (a[i][j]!=0)){
+                if(a[i][j] != 0){
                     flag=0;
                 }
                 else{
@@ -82,7 +82,7 @@ import java.util.*;
         int t=0;
         for (int i=1;i<m;i++){
             for(int j=0;j<i;j++){
-                if((j<i) &&  (b[i][j]!=0)){
+                if(b[i][j] != 0){
                     t=0;
                 }
                 else{
