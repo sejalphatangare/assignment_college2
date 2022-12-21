@@ -2,27 +2,26 @@ import java.util.*;
 public class House {
     Scanner sc = new Scanner(System.in);
     int[][] adjMat = new int[10][10];
-    int vertices, edges, n;
+    int  e, n;
+    int start,end;
 
     public House() {
-        for (vertices = 0; vertices < 10; vertices++) {
-            for (edges = 0; edges < 10; edges++) {
-                adjMat[vertices][edges] = 0;
-            }
-        }
+       n=0;
+       e=0;
+
     }
 
     public void create() {
 // assume undirected graph
-        System.out.println("\n\tHow many Houses You Want to Add: ");
+        System.out.println("\n\tEnter the Number of ");
         n = sc.nextInt();
         do {
             System.out.println("\n\tEnter House Node: ");
-            vertices = sc.nextInt();
+            n = sc.nextInt();
             System.out.println("\n\tEnter Lane Node: ");
-            edges = sc.nextInt();
-            adjMat[vertices][edges] = 1;
-            adjMat[edges][vertices] = 1;
+            e= sc.nextInt();
+            adjMat[start][end] = 1;
+            adjMat[end][start] = 1;
             System.out.println("\n\tDo you want to add more House Number? Enter 1 for Yes And 0 for NO: ");
         } while (sc.nextInt() == 1);
 
@@ -41,7 +40,7 @@ public class House {
     public void dfs(int start) {
         int visited[] = new int[10];
         Stack<Integer> s = new Stack<>();
-        for (int i = 0; i < vertices; i++) {
+        for (int i = 0; i < n; i++) {
             visited[i] = 0;
         }
         visited[start] = 1;
@@ -89,3 +88,62 @@ public class House {
 
 }
 
+
+/*class graph
+{
+int n; //number of vertices
+int e; //number of edges
+int[][] adjMat; //adjacency matrix of the graph
+Node [] head; //array of heads of linked list used for adjacency//list
+graph()
+{
+n = 0;
+e = 0;
+}
+Scanner sc = new Scanner(System.in);
+void createUsingAdjMat()
+{
+System.out.print("\nEnter the number of houses: ");
+ n = sc.nextInt();
+
+System.out.print("Enter the number of lanes: ");
+ e = sc.nextInt();
+
+adjMat = new int[n][n];
+
+for(int i=0;i<n;i++) {
+	adjMat[i] = new int[n];
+	for(int j=0;j<n;j++) {
+		adjMat[i][j] = 0;
+	}
+}
+
+for(int i=0;i<e;i++) {
+
+	System.out.print("\nEnter the first house: ");
+	int x = sc.nextInt();
+
+	System.out.print("Enter the connected house: ");
+	int y = sc.nextInt();
+
+	adjMat[x][y] = 1; //both ways - since it is an undirected graph
+	adjMat[y][x] = 1;
+
+}
+
+}
+
+
+
+void displayAdjMat()
+{
+	System.out.println("Adjacency matrix:");
+	for(int i=0;i<n;i++) {
+		System.out.print("\t");
+		for(int j=0;j<n;j++) {
+			System.out.print(adjMat[i][j]+" ");
+		}
+		System.out.println();
+	}
+
+}*/
