@@ -13,7 +13,7 @@ public class BinarySearchTree {
 
     public void create() throws IOException {
         do {
-            BinarySearchTreeNode ptr = null, cur;
+            BinarySearchTreeNode ptr, cur;
             ptr = new BinarySearchTreeNode();
             System.out.println("\n\tEnter the Word in the Dictionary:");
             ptr.setWord(br.readLine());
@@ -29,7 +29,7 @@ public class BinarySearchTree {
                 System.out.println("Inserted the root");
             } else {
                 cur = root;
-                ptr = new BinarySearchTreeNode(ptr.getWord(), ptr.getMeaning());
+//                ptr = new BinarySearchTreeNode(ptr.getWord(), ptr.getMeaning());
 //                ptr.x = v;
                 ptr.left = null;
                 ptr.right = null;
@@ -90,28 +90,15 @@ public class BinarySearchTree {
         return cur;
     }
 
-    /*public void update() throws IOException {
-        System.out.println("\n\t1]Update Word in the Dictionary:\n\t2]Update Meaning in the Dictionary:");
-        int temp = sc.nextInt();
-        if (temp == 1) {
-            BinarySearchTreeNode ans = search();
-            if (ans != null) {
-                System.out.println("Enter the New Word to Update : ");
-                String newWord = br.readLine();
-                ans.setWord(newWord);
-            } else {
-                System.out.println("Data Not Found");
-            }
-        } else {
+    public void update() throws IOException {
+        System.out.println("\n\tUpdate Meaning in the Dictionary:");
             BinarySearchTreeNode ans = search();
             if (ans != null) {
                 System.out.println("Enter the New Meaning to Update:");
                 String newMeaning = br.readLine();
                 ans.setMeaning(newMeaning);
-
             }
-        }
-    }*/
+    }
 
     public void deletion(BinarySearchTreeNode cur, String ele) {
         Scanner sc = new Scanner(System.in);
@@ -238,6 +225,9 @@ public class BinarySearchTree {
                 case 3: {
                     b1.search();
                     break;
+                }
+                case 4:{
+                    b1.update();
                 }
 
                 case 5: {

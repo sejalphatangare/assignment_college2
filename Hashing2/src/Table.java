@@ -8,8 +8,6 @@ public class Table {
         hashtable=new Customer[size];
 
     }
-
-    int hahaddress;
     Scanner sc=new Scanner(System.in);
     InputStreamReader ir=new InputStreamReader(System.in);
     BufferedReader br=new BufferedReader(ir);
@@ -73,6 +71,50 @@ public class Table {
             }
         }
     }
+    public void search() {
+            System.out.println("\n\tEnter the Account Number: ");
+            double tosearch = sc.nextInt();
+
+            int hashvalue = hash(tosearch);
+            int flag = 0;
+            int count = size;
+            while (hashtable[hashvalue] != null && count!=0) {
+                if (hashtable[hashvalue].id == tosearch) {
+                    flag = 1;
+                    System.out.println("\n\tSuccesfully Found!");
+                    System.out.println("\n\tName: " + hashtable[hashvalue].name);
+                    System.out.println("\n\tID: " + hashtable[hashvalue].id);
+                    System.out.println("\n\tBalance Amount: " + hashtable[hashvalue].balance);
+                    System.out.println("\n\t");
+                    break;
+                }
+//                System.out.println("Hello1");
+                count--;
+                hashvalue = (hashvalue + 1) % size;
+            }
+            if (flag == 0) {
+                System.out.println("\n\tAccount Not Found!");
+            }
+    }
+            /*if(hashtable[hashvalue]!=null){
+                while(count!=0 && hashtable[hashvalue].id!=tosearch) {
+                    hashvalue = (hashvalue + 1) % size;
+                    count--;//so that we dont traverse same element twice
+                }
+            }
+            if(count==0 || hashtable[hashvalue]==null){
+                System.out.println("\n\tAccount Number not Found!");
+            }
+            else{
+                System.out.println("\n\tSuccesfully Found!");
+                System.out.println("\n\tName: "+hashtable[hashvalue].name);
+                System.out.println("\n\tID: "+hashtable[hashvalue].id);
+                System.out.println("\n\tBalance Amount: "+hashtable[hashvalue].balance);
+                System.out.println("\n\t");
+            }
+        }*/
+
+
     public static void main(String[] args) throws IOException {
         Scanner sc1 = new Scanner(System.in);
         InputStreamReader ir1 = new InputStreamReader(System.in);
@@ -82,6 +124,7 @@ public class Table {
         Table t1 = new Table(size);
 
         do {
+            System.out.println("Enter the choices \n1-insert\n2-display\n3-search");
             switch (sc1.nextInt()){
                 case 1:{
                     System.out.println("\n\tEnter your Account number : ");
@@ -95,6 +138,10 @@ public class Table {
                 }
                 case 2:{
                     t1.display();
+                    break;
+                }
+                case 3:{
+                    t1.search();
                     break;
                 }
             }

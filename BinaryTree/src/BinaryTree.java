@@ -14,8 +14,6 @@ public class BinaryTree{
     public void setDirection(String direction) {
         Direction = direction;
     }
-
-
     public BinaryTree() {
         root = null;
     }
@@ -42,7 +40,7 @@ public class BinaryTree{
                             System.out.println("Data Added to the left of the "+cur.getData());
                             break;
                         }else {
-                            System.out.println("Moving Left of the Data "+cur.left.getData()+ " :");
+                            System.out.println("Moving Left of the Data "+cur.getData()+ " :");
                             cur=cur.left;
                             System.out.println("Pointer is now at: "+cur.getData());
 
@@ -104,11 +102,9 @@ public class BinaryTree{
                     s1.push(cur);
                     cur = cur.left;
                 } else {
-                    if (!s1.isEmpty()) {
-                        cur = s1.pop();
-                        System.out.print(cur.getData() + " ");
-                        cur = cur.right;
-                    }
+                    cur = s1.pop();
+                    System.out.print(cur.getData() + " ");
+                    cur = cur.right;
                 }
             }
         }

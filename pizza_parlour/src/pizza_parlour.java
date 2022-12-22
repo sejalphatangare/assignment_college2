@@ -15,9 +15,6 @@ public class pizza_parlour{
         BufferedReader br = new BufferedReader(ir);
         List<Pizza> p1 = new ArrayList<>();
 
-
-
-
             System.out.println("**************\t Menu\t*****************");
             System.out.println("**************************************************************************************************");
             System.out.println("Pizza\t\t\tQuantity\t\tPrice\n1]Margerita\n\t\t\tsmall\t\t\t99\n\t\t\tmedium\t\t\t199\n\t\t\tlarge\t\t\t299");
